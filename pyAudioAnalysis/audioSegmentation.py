@@ -474,6 +474,8 @@ def hmm_segmentation(audio_file, hmm_model_name, plot_results=False,
         class_names = cpickle.load(f_handle)
         mid_window = cpickle.load(f_handle)
         mid_step = cpickle.load(f_handle)
+    
+    print('file opened')
 
     features, _, _ = \
         mtf.mid_feature_extraction(signal, sampling_rate,
